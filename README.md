@@ -1,0 +1,2 @@
+# tindog
+scrimba solo project
