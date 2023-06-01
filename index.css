@@ -1,0 +1,33 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #B7B7B7;
+  width: 550px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 18px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #F8F8F8;
+
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+i {
+  font-size: 2rem;
+}
+
+
+.tindog-logo {
+  width: 84px;
+}
