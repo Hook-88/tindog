@@ -93,7 +93,8 @@ button {
   color: #E82D70;
 }
 
-.dislike-btn:hover {
+.dislike-btn:hover,
+.dislike-btn:focus {
   background-color: #FFE7EF;
 }
 
@@ -101,7 +102,16 @@ button {
   color: #56E9CD;
 }
 
-.like-btn:hover {
+.like-btn:hover,
+.like-btn:focus {
+  background-color: #DBFFF4;
+}
+
+.red-bg{
+  background-color: #FFE7EF;
+}
+
+.green-bg {
   background-color: #DBFFF4;
 }
 

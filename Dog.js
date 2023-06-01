@@ -18,14 +18,14 @@ class Dog {
 
     <div class="btns-container">
       <button 
-        class="dislike-btn" 
+        class="dislike-btn ${!hasBeenLiked && hasBeenSwiped ? "red-bg" : ""}" 
         data-nope="${name}"
       >
         <i class="fa-solid fa-xmark" data-nope="${name}"></i>
       </button>  
 
       <button 
-        class="like-btn" 
+        class="like-btn ${hasBeenLiked ? "green-bg" : ""}" 
           data-like="${name}"
       >
         <i class="fa-solid fa-heart" data-like="${name}"></i>
