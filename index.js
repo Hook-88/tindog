@@ -15,23 +15,19 @@ document.addEventListener('click', e => {
   } else if(e.target.dataset.nope) {
     targetDog.sethasBeenSwipedtoTrue()
   }
-    reRender(targetDog)
+    reRender(targetDog.getProfileHTML())
     setTimeout(function () {
       render()
     }, 1000)
 })
 
 function render() {
-  const targetProfile = dogsArray.find(dog => {
-    return !dog.hasBeenSwiped
-  })
-  if (targetProfile) {
-    document.querySelector('main').innerHTML = targetProfile.getProfileHTML()
-  }
+  const targetProfile = dogsArray.find(dog => !dog.hasBeenSwiped)
+  targetProfile ? reRender(targetProfile.getProfileHTML()) : reRender('no more dogs')
 }
 
 function reRender(data) {
-  document.querySelector('main').innerHTML = data.getProfileHTML()
+  document.querySelector('main').innerHTML = data
 }
 
 render()
