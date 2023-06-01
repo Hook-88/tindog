@@ -4,12 +4,12 @@ class Dog {
     Object.assign(this, data)
   }
   getProfileHTML() {
-    const {avatar, name, age, bio} = this
+    const {avatar, name, age, bio, hasBeenLiked, hasBeenSwiped} = this
     return `
     <div class="profile-container">
       <img src="${avatar}" alt="Photo of ${name} the dog" class="profile-img" id="${name}">
-      <img src="./images/badge-like.png" alt="Like badge" class="img-badge">
-      <img src="./images/badge-nope.png" alt="Nope badge" class="img-badge" >
+      <img src="./images/badge-like.png" alt="Like badge" class="img-badge ${!hasBeenLiked ? "hidden": ""}">
+      <img src="./images/badge-nope.png" alt="Nope badge" class="img-badge ${!hasBeenLiked && hasBeenSwiped ? "" : "hidden"}" >
       <div class="profile-text">
         <h2>${name}, ${age}</h2>
         <h3>${bio}</h3>
@@ -21,18 +21,26 @@ class Dog {
         class="dislike-btn" 
         data-nope="${name}"
       >
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark" data-nope="${name}"></i>
       </button>  
 
       <button 
         class="like-btn" 
           data-like="${name}"
       >
-        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-heart" data-like="${name}"></i>
       </button>
     </div>
     `
   }
+  sethasBeenLikedtoTrue() {
+    this.hasBeenLiked = true
+    this.sethasBeenSwipedtoTrue()
+  }
+  sethasBeenSwipedtoTrue() {
+    this.hasBeenSwiped = true
+  }
+
 }
 
 export {Dog}

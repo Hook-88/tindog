@@ -111,5 +111,8 @@ button {
   top: 55px;
   left: 20px;
   transform: rotate(-30deg);
+}
+
+.hidden {
   display: none;
 }
