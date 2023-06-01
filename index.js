@@ -4,4 +4,4 @@ import {dogs} from './data.js'
 
 const rex = new Dog(dogs[0])
 
-document.querySelector('.profile-container').innerHTML = rex.getProfileHTML()
+document.querySelector('main').innerHTML = rex.getProfileHTML()
