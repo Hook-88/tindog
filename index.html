@@ -6,20 +6,24 @@
         <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         <!--styles  -->
         <link rel="stylesheet" href="index.css">
     </head>
-    <body>
+    <body class="red-border">
         <header>
             <i class="fa-solid fa-user"></i>
             <img src="./images/logo.png" alt="Logo Tindog" class="tindog-logo">
             <i class="fa-solid fa-comment"></i>
         </header>
         <main>
-            <img src="./images/dog-teddy.jpg" alt="Photo of Teddy the dog">
-            <h2>Teddy, 30</h2>
-            <h3>How you doin?</h3>
+            <div class="profile-container">
+                <img src="./images/dog-teddy.jpg" alt="Photo of Teddy the dog" class="profile-img">
+                <div class="profile-text">
+                    <h2>Teddy, 30</h2>
+                    <h3>How you doin?</h3>
+                </div> 
+            </div>        
             <button>Like</button>
             <button>Dislike</button>
         </main>
